@@ -128,7 +128,7 @@ static void show_open_dialog_handler(	GSimpleAction *action,
 
 	if(gmpv_file_chooser_run(open_dialog) == GTK_RESPONSE_ACCEPT)
 	{
-		GSList *uri_slist = gtk_file_chooser_get_filenames(file_chooser);
+		GSList *uri_slist = gtk_file_chooser_get_uris(file_chooser);
 		GSList *uri = uri_slist;
 		gsize uri_list_size =	sizeof(gchar **)*
 					(g_slist_length(uri_slist)+1);
